@@ -16,7 +16,8 @@ function PlantPage() {
     .then(allPlants => setPlants(allPlants))
   }, []); 
 
-  const filteredPlants = plants.filter((plant) => plant.name.includes(search))
+  const filteredPlants = plants.filter((plant) => 
+    plant.name.toLowerCase().includes(search.toLowerCase()))
 
   return (
     <main>
